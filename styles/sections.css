@@ -20,8 +20,8 @@ section header {
     }
 }
 
-#featured {
-    grid-area: featured;
+#feactured {
+    grid-area: feactured;
     img {
         height: 100%;
         object-fit: cover;
@@ -122,8 +122,8 @@ aside {
 }
 
 main {
-    @media (width <= 23.4375em) {
-        & #featured {
+    @media (width <= 31.25em) {
+        & #feactured {
             grid-auto-flow: row;
 
             & > div {
