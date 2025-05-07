@@ -36,6 +36,7 @@ section header {
             content: "";
             position: absolute;
             inset: 0;
+            overflow: hidden;
             top: 50%;
             background: linear-gradient(
                 180deg,
@@ -117,5 +118,68 @@ aside {
         width: 72px;
         aspect-ratio: 1/1;
         object-fit: cover;
+    }
+}
+
+main {
+    @media (width <= 23.4375em) {
+        & #featured {
+            grid-auto-flow: row;
+
+            & > div {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        & #weekly {
+            & #we-he {
+                display: flex;
+                gap: 7rem;
+                align-items: center;
+            }
+            & > div {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+
+                & img {
+                    width: auto;
+                    height: auto;
+                }
+            }
+        }
+
+        & #ai {
+            width: auto;
+            height: auto;
+
+            & header {
+                display: flex;
+                align-items: center;
+                gap: 7rem;
+
+                & a {
+                    align-self: center;
+                }
+            }
+
+            & article {
+                height: 205px;
+                overflow: hidden;
+            }
+        }
+
+        & aside {
+            margin-bottom: 3rem;
+            & #more header {
+                display: flex;
+                align-items: center;
+                gap: 7rem;
+
+                & h3 {
+                    text-align: center;
+                }
+            }
+        }
     }
 }
